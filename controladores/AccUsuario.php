@@ -53,23 +53,26 @@ and open the template in the editor.
     <body>    
 <div class="container" style="padding-top: 60px;">
   <h1 class="page-header">Editar Perfil</h1>
+  
   <div class="row">
+     
     <!-- left column -->
-    <form class="form-horizontal" role="form" action="<?=URLBASE?>/controladores/AccActualizaDatosUsuario.php" method="POST" enctype="multipart/form-data"> 
+    <form class="form-horizontal" role="form" action="<?=URLBASE?>controladores/AccActualizaDatosUsuario.php" method="POST" enctype="multipart/form-data"> 
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
           <img src="<?=URLBASE."/img/usuario/".$oUsr->getArchivo()?>" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Cambia la fotografía...</h6>
         <input type="file" name="imgusuario" id="imgusuario" class="text-center center-block well well-sm">
       </div>
+         <div>
+          <a href="<?=URLBASE?>/CerrarSesion.php" class="btn btn-success">Cerrar Sesion</a>
+      </div>
+        
     </div>
+        
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-      <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
-        <i class="fa fa-coffee"></i>
-        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-      </div>
+      
       <h3>Personal info</h3>
       
         <div class="form-group">
@@ -78,17 +81,16 @@ and open the template in the editor.
             <input class="form-control" value="<?=$oUsr->getNombre();?>" type="text">
           </div>
         </div>
-        
-        <div class="form-group">
-          <label class="col-lg-3 control-label">Compañia:</label>
+      <div class="form-group">
+          <label class="col-lg-3 control-label">Archivo:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" id="archivo" type="text">
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-lg-3 control-label">Email:</label>
+      <div class="form-group">
+          <label class="col-lg-3 control-label">Nombre Archivo:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" id="nomarchivo" type="text">
           </div>
         </div>
         <div class="form-group">
@@ -114,7 +116,7 @@ and open the template in the editor.
           <div class="col-md-8">
               <input class="btn btn-primary" value="Actualizar" type="submit">
             <span></span>
-            <input class="btn btn-default" value="Cancel" type="reset">
+            <input class="btn btn-default" value="Cancelar" type="reset">
           </div>
         </div>
       </form>
