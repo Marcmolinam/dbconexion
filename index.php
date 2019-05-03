@@ -46,7 +46,7 @@ SKIN: https://bootsnipp.com/snippets/2X0r
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="usuario" value="" placeholder="usuario o email">                                        
+                                        <input  id="login-username" type="text" class="form-control" name="usuario" value="" placeholder="usuario o email">                                        
                                     </div>
                                 
                             <div style="margin-bottom: 25px" class="input-group">

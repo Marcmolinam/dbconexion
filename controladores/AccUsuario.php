@@ -78,37 +78,37 @@ and open the template in the editor.
         <div class="form-group">
           <label class="col-lg-3 control-label">Nombre:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<?=$oUsr->getNombre();?>" type="text">
+            <input name="nombre" class="form-control" value="<?=$oUsr->getNombre();?>" type="text">
           </div>
         </div>
       <div class="form-group">
           <label class="col-lg-3 control-label">Archivo:</label>
           <div class="col-lg-8">
-            <input class="form-control" id="archivo" type="text">
+            <input name="archivo"class="form-control" id="archivo" type="text">
           </div>
         </div>
       <div class="form-group">
           <label class="col-lg-3 control-label">Nombre Archivo:</label>
           <div class="col-lg-8">
-            <input class="form-control" id="nomarchivo" type="text">
+            <input name="nomarchivo" class="form-control" id="nomarchivo" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Nombre de usuario:</label>
           <div class="col-md-8">
-              <input class="form-control" readonly="true" value="<?=$oUsr->getNomusuario();?>" type="text">
+              <input name="nomusuario" class="form-control" readonly="true" value="<?=$oUsr->getNomusuario();?>" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Clave:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="password">
+            <input name="clave" class="form-control" value="" type="password">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Confirme la clave:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="password">
+            <input name="clave2" class="form-control" value="" type="password">
           </div>
         </div>
         <div class="form-group">

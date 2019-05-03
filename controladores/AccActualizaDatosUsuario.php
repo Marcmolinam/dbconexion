@@ -22,6 +22,9 @@ if(!mkdir(DIRBASE."/img/usuario/", 0777, true)) {
 }
 }
 $idusuario=$oUsr->getId();
+$upd=0;
+if (isset($FILES["imgusuario"]["name"])) {
+    
 
 /*obtener extensión*/
 $arrfile=pathinfo($_FILES["imgusuario"]["name"]);
@@ -39,5 +42,16 @@ move_uploaded_file($_FILES["imgusuario"]["tmp_name"], $sDirArchivo);
 /*Actualización en la BBDD*/
 $oUsr->setNomarchivo($sNomArchivo);
 $oUsr->setArchivo($idusuario.".".$arrfile["extension"]);
+$upd++;
 
-$oUsr->ActualizaDatos();
+}
+    if ($_POST["nombre"]!=$oUsr->getNombre() || $_POST["clave2"]!=$oUsr->getClave()) {
+
+    $oUsr->setNombre($_POST["nombre"]);
+    }
+
+    $oUsr->setClave($_POST["clave2"]);     
+    if ($upd>=1) {
+    
+    $oUsr->ActualizaDatos();
+}
